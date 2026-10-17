@@ -31,6 +31,7 @@ func change_spikes(direction: String):
 func _on_spike_timer_5_timeout() -> void:
 	change_spikes("up")
 	$"../Decor".set_cell(Vector2i(3, 1), 0 ,Vector2i(2, 5))
+	$spike_timer_5.stop()
 
 
 func _on_body_entered(body: Node2D) -> void:

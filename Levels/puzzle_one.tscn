@@ -13,6 +13,10 @@
 [ext_resource type="Script" uid="uid://g12s5o6be3d5" path="res://Levels/lever_5.gd" id="11_f8r5y"]
 [ext_resource type="Script" uid="uid://b4occ40o8qpql" path="res://Levels/lever_6.gd" id="12_e25ot"]
 [ext_resource type="Script" uid="uid://chbtbyf375rwj" path="res://Levels/lever_7.gd" id="13_yc4r2"]
+[ext_resource type="Script" uid="uid://dkjclim8d1k5a" path="res://Levels/right_side_button_3.gd" id="14_5ijeu"]
+[ext_resource type="Script" uid="uid://bwfx10m8naucg" path="res://Levels/right_side_button_4.gd" id="15_7u7m6"]
+[ext_resource type="Script" uid="uid://bd03empxjuygm" path="res://Levels/left_side_button_1.gd" id="16_a357r"]
+[ext_resource type="Script" uid="uid://k2umeta560io" path="res://Levels/left_side_button_2.gd" id="17_7gc7q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3w040"]
 texture = ExtResource("1_8160w")
@@ -320,6 +324,18 @@ size = Vector2(14, 13)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djodd"]
 size = Vector2(14, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qk0q"]
+size = Vector2(12, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3137r"]
+size = Vector2(12, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4hq7"]
+size = Vector2(12, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lq03y"]
+size = Vector2(12, 13)
+
 [node name="Node2D" type="Node2D" unique_id=1845091345]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=2006655620]
@@ -446,6 +462,38 @@ shape = SubResource("RectangleShape2D_djodd")
 [node name="spike_timer_5" type="Timer" parent="Lever_7" unique_id=990451197]
 wait_time = 5.0
 
+[node name="right_side_button_3" type="Area2D" parent="." unique_id=1390925795]
+position = Vector2(424, 182)
+script = ExtResource("14_5ijeu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_side_button_3" unique_id=445605718]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_7qk0q")
+
+[node name="right_side_button_4" type="Area2D" parent="." unique_id=1670982118]
+position = Vector2(56, 247)
+script = ExtResource("15_7u7m6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_side_button_4" unique_id=941487322]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_3137r")
+
+[node name="left_side_button_1" type="Area2D" parent="." unique_id=1711219203]
+position = Vector2(-472, -122)
+script = ExtResource("16_a357r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_side_button_1" unique_id=231748747]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_v4hq7")
+
+[node name="left_side_button_2" type="Area2D" parent="." unique_id=1009512924]
+position = Vector2(-392, 71)
+script = ExtResource("17_7gc7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_side_button_2" unique_id=1024533283]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_lq03y")
+
 [connection signal="body_entered" from="Lever_1" to="Lever_1" method="_on_body_entered"]
 [connection signal="timeout" from="Lever_1/spike_timer_10" to="Lever_1" method="_on_spike_timer_10_timeout"]
 [connection signal="body_entered" from="Lever_2" to="Lever_2" method="_on_body_entered"]
@@ -463,3 +511,11 @@ wait_time = 5.0
 [connection signal="timeout" from="Lever_6/spike_timer_8" to="Lever_6" method="_on_spike_timer_8_timeout"]
 [connection signal="body_entered" from="Lever_7" to="Lever_7" method="_on_body_entered"]
 [connection signal="timeout" from="Lever_7/spike_timer_5" to="Lever_7" method="_on_spike_timer_5_timeout"]
+[connection signal="body_entered" from="right_side_button_3" to="right_side_button_3" method="_on_body_entered"]
+[connection signal="body_exited" from="right_side_button_3" to="right_side_button_3" method="_on_body_exited"]
+[connection signal="body_entered" from="right_side_button_4" to="right_side_button_4" method="_on_body_entered"]
+[connection signal="body_exited" from="right_side_button_4" to="right_side_button_4" method="_on_body_exited"]
+[connection signal="body_entered" from="left_side_button_1" to="left_side_button_1" method="_on_body_entered"]
+[connection signal="body_exited" from="left_side_button_1" to="left_side_button_1" method="_on_body_exited"]
+[connection signal="body_entered" from="left_side_button_2" to="left_side_button_2" method="_on_body_entered"]
+[connection signal="body_exited" from="left_side_button_2" to="left_side_button_2" method="_on_body_exited"]
