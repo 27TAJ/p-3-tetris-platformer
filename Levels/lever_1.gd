@@ -8,14 +8,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
+# Put down spikes ; set the lever to on ; start timer
 func _on_body_entered(body: Node2D) -> void:
 	change_spikes("down")
 	$"../Decor".set_cell(Vector2i(-3,-5), 0, Vector2i(3,5))
 	$spike_timer_10.start()
-	
 
-	
+# Edit spike tiles
 func change_spikes(direction: String):
 	if direction == "down":
 		$"../Decor".set_cell(Vector2i(-5,-3), 0, Vector2i(0,3))
@@ -30,7 +29,7 @@ func change_spikes(direction: String):
 		$"../Decor".set_cell(Vector2i(7,-3), 0, Vector2i(3,3))
 		$"../Decor".set_cell(Vector2i(7,-2), 0, Vector2i(3,3))
 
-
+# Put spikes back up and set lever to off
 func _on_spike_timer_10_timeout() -> void:
 	change_spikes("up")
 	$"../Decor".set_cell(Vector2i(-3,-5), 0, Vector2i(2,5))

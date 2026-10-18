@@ -14,13 +14,13 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	$"../Decor".set_cell(Vector2i(-19,-16), 3, Vector2i(1,4)) # Change button to pressed
-	change_spikes("down")
+	change_spikes("down") # Change spikes to down
 
 func _on_body_exited(body: Node2D) -> void:
 	$"../Decor".set_cell(Vector2i(-19,-16), 3, Vector2i(0,4)) # Change button to unpressed
-	change_spikes("up")
+	change_spikes("up") # Change spikes to up
  
-	
+# Edit spike tiles
 func change_spikes(direction: String):
 	if direction == "down":
 		$"../Decor".set_cell(Vector2i(-15,-22), 3, Vector2i(0,3)) # Change Spikes to down

@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
+# set button to pressed and put spikes down
 func _on_body_entered(body: Node2D) -> void:
 	
 	$"../Decor".set_cell(Vector2i(10, -6), 0 , Vector2i(3, 4))

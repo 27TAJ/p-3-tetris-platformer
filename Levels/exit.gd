@@ -10,9 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-
-
-
+# If player enters switch to level 2
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		get_tree().change_scene_to_file("res://Levels/puzzle_one.tscn")
