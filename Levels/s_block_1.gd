@@ -9,8 +9,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-
 func _on_body_entered(body: Node2D) -> void:
 	queue_free()
 	get_parent().add_block()

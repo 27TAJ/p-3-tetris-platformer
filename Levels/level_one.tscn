@@ -629,12 +629,16 @@ lock_rotation = true
 contact_monitor = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Pillar" unique_id=918932078]
-position = Vector2(-134, -6)
+position = Vector2(104, -23)
 texture = SubResource("AtlasTexture_2ik6o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pillar" unique_id=1644598564]
-position = Vector2(-134, 8)
+position = Vector2(104, -9)
 shape = SubResource("RectangleShape2D_4ixt7")
+
+[node name="RayCast2D" type="RayCast2D" parent="Pillar" unique_id=162257459]
+position = Vector2(104, -9)
+target_position = Vector2(16, 0)
 
 [node name="Pillar2" type="RigidBody2D" parent="." unique_id=1436832426]
 gravity_scale = 0.0
@@ -649,6 +653,10 @@ texture = SubResource("AtlasTexture_2ik6o")
 position = Vector2(-40, -297)
 shape = SubResource("RectangleShape2D_4ixt7")
 
+[node name="RayCast2D" type="RayCast2D" parent="Pillar2" unique_id=714574514]
+position = Vector2(-40, -297)
+target_position = Vector2(16, 0)
+
 [node name="Pillar3" type="RigidBody2D" parent="." unique_id=1613478116]
 gravity_scale = 0.0
 lock_rotation = true
@@ -662,6 +670,10 @@ texture = SubResource("AtlasTexture_2ik6o")
 position = Vector2(-376, -330)
 shape = SubResource("RectangleShape2D_4ixt7")
 
+[node name="RayCast2D" type="RayCast2D" parent="Pillar3" unique_id=1503572517]
+position = Vector2(-376, -330)
+target_position = Vector2(16, 0)
+
 [node name="Pillar4" type="RigidBody2D" parent="." unique_id=658763478]
 gravity_scale = 0.0
 lock_rotation = true
@@ -674,6 +686,10 @@ texture = SubResource("AtlasTexture_2ik6o")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pillar4" unique_id=1282748282]
 position = Vector2(-424, -618)
 shape = SubResource("RectangleShape2D_4ixt7")
+
+[node name="RayCast2D" type="RayCast2D" parent="Pillar4" unique_id=1804853502]
+position = Vector2(-424, -618)
+target_position = Vector2(16, 0)
 
 [node name="Button_1" type="Area2D" parent="." unique_id=164999838]
 position = Vector2(-88, -41)

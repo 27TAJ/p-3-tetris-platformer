@@ -1,4 +1,5 @@
 extends Area2D
+class_name button
 
 
 # Called when the node enters the scene tree for the first time.

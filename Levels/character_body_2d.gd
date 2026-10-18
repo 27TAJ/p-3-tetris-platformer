@@ -30,14 +30,19 @@ func _physics_process(delta: float) -> void:
 		var collider = collision.get_collider()
 
 		if collider is RigidBody2D:
-			var push_dir = -collision.get_normal()
-			var current_cell = floor_layer.local_to_map(floor_layer.to_local(collider.global_position))
-			var next_cell = current_cell + Vector2i(roundi(push_dir.x), roundi(push_dir.y))
 			
-			if (wall_layer.get_cell_source_id(next_cell) == -1 && decor_layer.get_cell_source_id(next_cell) == -1):
+			var push_dir = -collision.get_normal()
+			var raycast: RayCast2D = collider.get_node("RayCast2D")
+			raycast.target_position = push_dir * 16
+			raycast.force_raycast_update()
+			
+			if not raycast.is_colliding() or raycast.get_collider() == self:
+				
+				var current_cell = floor_layer.local_to_map(floor_layer.to_local(collider.global_position))
+				var next_cell = current_cell + Vector2i(roundi(push_dir.x), roundi(push_dir.y))
 				collider.global_position = floor_layer.to_global(floor_layer.map_to_local(next_cell))
 
-			collider.linear_velocity = Vector2.ZERO
-			collider.angular_velocity = 0.0
+				collider.linear_velocity = Vector2.ZERO
+				collider.angular_velocity = 0.0
 	
 	
