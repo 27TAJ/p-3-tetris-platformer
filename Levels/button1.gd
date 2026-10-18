@@ -15,8 +15,6 @@ func _on_body_entered(body: Node2D) -> void:
 	$"../Decor".set_cell(Vector2i(-6,-3), 3, Vector2i(1,4)) # Change button to pressed
 	$"../Walls".set_cell(Vector2i(-1,-6), 2, Vector2i(21,3)) # Open room 1 door
 	$"../Walls".set_cell(Vector2i(0,-6), 2, Vector2i(22,3)) # Open room 1 door
-	
-
 
 
 func _on_body_exited(body: Node2D) -> void:

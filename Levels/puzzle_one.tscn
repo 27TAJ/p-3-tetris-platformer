@@ -729,7 +729,7 @@ script = ExtResource("19_urv1b")
 position = Vector2(5, 3)
 scale = Vector2(0.825, 0.8)
 sprite_frames = SubResource("SpriteFrames_jsoog")
-frame_progress = 0.19903691
+frame_progress = 0.8035301
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="S_Block_1" unique_id=840114]
 shape = SubResource("CircleShape2D_62b5g")
@@ -741,7 +741,7 @@ script = ExtResource("22_y4ytw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="I_Block_1" unique_id=2020544498]
 position = Vector2(9, 0)
 sprite_frames = SubResource("SpriteFrames_rw6pb")
-frame_progress = 0.13076809
+frame_progress = 0.42589474
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="I_Block_1" unique_id=264061381]
 position = Vector2(8, 0)
@@ -754,7 +754,7 @@ script = ExtResource("23_jsoog")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="L_Block_1" unique_id=469188817]
 position = Vector2(6, 1)
 sprite_frames = SubResource("SpriteFrames_472ql")
-frame_progress = 0.057376556
+frame_progress = 0.99992985
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="L_Block_1" unique_id=1303027587]
 shape = SubResource("CircleShape2D_rw6pb")
@@ -767,7 +767,7 @@ script = ExtResource("21_urv1b")
 position = Vector2(5.5, 3.0000076)
 scale = Vector2(0.8249999, 0.85000044)
 sprite_frames = SubResource("SpriteFrames_2nxdk")
-frame_progress = 0.9704222
+frame_progress = 0.2510928
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="J_Block_1" unique_id=446239219]
 position = Vector2(1, 1)

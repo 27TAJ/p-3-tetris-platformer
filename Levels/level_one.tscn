@@ -699,6 +699,15 @@ script = ExtResource("5_cph7v")
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_c6m15")
 
+[node name="Label" type="Label" parent="Button_1" unique_id=246067618]
+offset_left = -44.0
+offset_top = 59.0
+offset_right = 235.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 9
+text = "Push pillars in order to solve puzzles and navigate the maze...
+Collect 4 blocks in order to move on..."
+
 [node name="Button_2" type="Area2D" parent="." unique_id=1495483439]
 position = Vector2(-56, -377)
 script = ExtResource("7_ya8ts")
